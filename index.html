@@ -9,76 +9,80 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 html, body {
-height: 100%;
-overflow-x: hidden;
-overflow-y: auto;
--webkit-overflow-scrolling: touch;
-scrollbar-width: none;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-color: #333;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
 }
 body::-webkit-scrollbar { width: 0 !important; background: transparent; }
 
 .container { 
-max-width: 480px;
-margin: 40px auto;
-background: #fff;
-box-shadow: 0 0 40px rgba(0,0,0,0.3);
-border-radius: 20px;
-overflow: hidden;
+  max-width: 480px;
+  margin: 40px auto;
+  background: #fff;
+  box-shadow: 0 0 40px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 /* Video section */
 .video-section { 
-position: relative;
-width: 100%;
-background: #ccc;
-margin: 40px 0;
-border-radius: 12px;
-overflow: hidden;
-display: flex;
-align-items: center;
-justify-content: center;
+  position: relative;
+  width: 100%;
+  background: #ccc;
+  margin: 40px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .video-section.locked { 
-background: #888;
-color: white;
-font-size: 20px;
-font-weight: 700;
-text-align: center;
-padding: 40px 20px;
+  background: #888;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding: 40px 20px;
 }
 .video-section video {
-width: 100%;
-height: 100%;
-display: block;
-object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .content-section { padding: 40px 25px; }
 .headline { font-size: 30px; font-weight: 700; color: #2d3748; text-align: center; margin-bottom: 40px; line-height: 1.4; }
 .headline-highlight { color: #ff4d4d; display: block; margin-top: 8px; }
-.highlight-red { color: red; font-weight: 700; }
+
+/* Standardize red to match minus numbers */
+.highlight-red { color: #ff4d4d; font-weight: 700; }
+.result-value.red { color: #ff4d4d; }
+
 .highlight-green { color: green; font-weight: 700; }
 
 .calculator { 
-background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
-border-radius: 20px; 
-padding: 30px; 
-box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-margin-bottom: 50px;
+  background: linear-gradient(135deg, #f6f8fb 0%, #ffffff 100%);
+  border-radius: 20px; 
+  padding: 30px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin-bottom: 50px;
 }
 .calculator-title { 
-font-size: 20px;
-font-weight: 600;
-color: #2d3748;
-margin-bottom: 25px;
-text-align: center;
-max-width: 360px;
-margin-left: auto;
-margin-right: auto;
-line-height: 1.6;
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 25px;
+  text-align: center;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
 }
 
 .input-group { margin-bottom: 25px; }
@@ -89,62 +93,62 @@ line-height: 1.6;
 .input-help { font-size: 12px; color: #4a5568; margin-top: 4px; font-style: italic; }
 
 .results { 
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-border-radius: 15px; 
-padding: 25px; 
-margin-top: 30px;
-color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px; 
+  padding: 25px; 
+  margin-top: 30px;
+  color: white;
 }
 .result-row { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.2); }
 .result-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .result-label { font-size: 14px; opacity: 0.9; margin-bottom: 5px; }
 .result-value { font-size: 24px; font-weight: 700; color: white; transition: color 0.3s; }
-.result-value.red { color: red; }
 
 .cta-section { padding: 50px 20px 60px; text-align: center; }
 .cta-text { font-size: 22px; color: #2d3748; margin-bottom: 25px; font-weight: 500; }
-/* UPDATED: Bigger "Boka ett kostnadsfritt möte" button */
+
+/* Bigger "Boka ett kostnadsfritt möte" button */
 .cta-button { 
-display: inline-block;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-color: white;
-padding: 28px 60px;  /* increased padding */
-font-size: 24px;       /* larger text */
-font-weight: 700;
-text-decoration: none;
-border-radius: 55px;
-cursor: pointer;
-min-width: 320px;      /* wider button */
-transition: all 0.3s ease;
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 28px 60px;  /* increased padding */
+  font-size: 24px;      /* larger text */
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 55px;
+  cursor: pointer;
+  min-width: 320px;      /* wider button */
+  transition: all 0.3s ease;
 }
 .cta-button:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(102,126,234,0.5); }
 .cta-subtext { font-size: 14px; color: #718096; margin-top: 20px; }
 
 .unlock-button { 
-display: block;
-margin: 25px auto;
-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-color: white;
-padding: 18px 40px;
-font-size: 18px;
-font-weight: 700;
-border-radius: 50px;
-cursor: pointer;
-text-align: center;
-min-width: 280px;
+  display: block;
+  margin: 25px auto;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 280px;
 }
 
 .roadmap {
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin: 50px 0;
-padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 0;
+  padding: 0 10px;
 }
 .step {
-text-align: center;
-flex: 1;
-position: relative;
+  text-align: center;
+  flex: 1;
+  position: relative;
 }
 .step .icon { font-size: 32px; margin-bottom: 10px; transition: transform 0.3s ease; }
 .step .label { font-size: 14px; color: #4a5568; }
@@ -156,13 +160,13 @@ position: relative;
 .qualified-text { display:none; font-size: 20px; font-weight:700; text-align:center; margin:40px 0; }
 
 @media (max-width: 480px) { 
-.headline { font-size: 26px; }
-.calculator { padding: 20px; }
-.result-value { font-size: 20px; }
-.input-help { font-size: 11px; }
-.cta-text { font-size: 20px; }
-/* Make button slightly smaller on mobile but still bigger than before */
-.cta-button { font-size: 20px; padding: 22px 50px; }
+  .headline { font-size: 26px; }
+  .calculator { padding: 20px; }
+  .result-value { font-size: 20px; }
+  .input-help { font-size: 11px; }
+  .cta-text { font-size: 20px; }
+  /* Make button slightly smaller on mobile but still bigger than before */
+  .cta-button { font-size: 20px; padding: 22px 50px; }
 }
 </style>
 </head>
@@ -213,11 +217,11 @@ Upptäck vad det <span class="highlight-red">kostar</span> ditt företag
 </div>
 <div class="result-row">
 <div class="result-label">Pengar ni lämnade på bordet förra månaden</div>
-<div class="result-value" id="lostRevenue">0 kr</div>
+<div class="result-value red" id="lostRevenue">0 kr</div>
 </div>
 <div class="result-row">
 <div class="result-label">Cirka så här mycket lämnar ni på bordet per år</div>
-<div class="result-value" id="lostRevenueYear">0 kr</div>
+<div class="result-value red" id="lostRevenueYear">0 kr</div>
 </div>
 </div>
 
@@ -254,19 +258,19 @@ Upptäck vad det <span class="highlight-red">kostar</span> ditt företag
 </div>
 
 <div class="cta-section">
-  <p class="cta-text">
-    Se vilka <span class="highlight-green">AI-lösningar</span> som ert företag hade behövt, 
-    för att inte gå <span class="highlight-red">miste om intäkter varje månad</span>. 
-    Redo att ta <span class="highlight-green">nästa steg</span>?
-  </p>
-  <a href="https://calendly.com/philip-gottbrink/30min" 
-     class="cta-button" 
-     id="bookingButton" 
-     target="_blank" 
-     rel="noopener noreferrer">
-    🚀Boka ett kostnadsfritt möte
-  </a>
-  <p class="cta-subtext">Kostnadsfri konsultation • 30 minuter</p>
+<p class="cta-text">
+  Se vilka <span class="highlight-green">AI-lösningar</span> som ert företag hade behövt, 
+  för att inte gå <span class="highlight-red">miste om intäkter varje månad</span>. 
+  Redo att ta <span class="highlight-green">nästa steg</span>?
+</p>
+<a href="https://calendly.com/philip-gottbrink/30min" 
+  class="cta-button" 
+  id="bookingButton" 
+  target="_blank" 
+  rel="noopener noreferrer">
+  🚀Boka ett kostnadsfritt möte
+</a>
+<p class="cta-subtext">Kostnadsfri konsultation • 30 minuter</p>
 </div>
 
 <script>
@@ -289,97 +293,82 @@ const calculateButton = document.getElementById('calculateButton');
 const qualifiedText = document.getElementById('qualifiedText');
 
 function formatCurrency(number) {
-return new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK', minimumFractionDigits: 0 }).format(number);
+  return new Intl.NumberFormat('sv-SE', { style: 'currency', currency: 'SEK', minimumFractionDigits: 0 }).format(number);
 }
 
 function updateCalculations() {
-const inquiries = parseFloat(inquiriesInput.value) || 0;
-const totalRevenueLastMonth = parseFloat(totalRevenueLastMonthInput.value) || 0;
-const projectsLastMonth = parseFloat(projectsLastMonthInput.value) || 0;
-const adminHours = parseFloat(adminHoursInput.value) || 0;
+  const inquiries = parseFloat(inquiriesInput.value) || 0;
+  const totalRevenueLastMonth = parseFloat(totalRevenueLastMonthInput.value) || 0;
+  const projectsLastMonth = parseFloat(projectsLastMonthInput.value) || 0;
+  const adminHours = parseFloat(adminHoursInput.value) || 0;
 
-// Beräkna konverteringsgrad automatiskt
-const conversionRate = inquiries > 0 ? (projectsLastMonth / inquiries) * 100 : 0;
+  const conversionRate = inquiries > 0 ? (projectsLastMonth / inquiries) * 100 : 0;
+  const projectValue = projectsLastMonth > 0 ? totalRevenueLastMonth / projectsLastMonth : 0;
+  const currentRevenue = projectsLastMonth * projectValue;
+  const improvedConversionRate = Math.min(conversionRate + AI_IMPROVEMENT, 100);
+  const adminImpact = 0.002 * adminHours;
+  const potentialRevenue = inquiries * projectValue * (improvedConversionRate / 100) * (1 + adminImpact);
+  const lostRevenue = potentialRevenue - currentRevenue;
 
-// Beräkna genomsnittligt värde per projekt
-const projectValue = projectsLastMonth > 0 ? totalRevenueLastMonth / projectsLastMonth : 0;
+  currentRevenueEl.textContent = formatCurrency(currentRevenue);
 
-// Nuvarande intäkt
-const currentRevenue = projectsLastMonth * projectValue;
+  if (lostRevenue > 0) {
+    lostRevenueEl.textContent = '-' + formatCurrency(lostRevenue);
+    lostRevenueEl.classList.add('red');
+    lostRevenueYearEl.textContent = '-' + formatCurrency(lostRevenue * 12);
+    lostRevenueYearEl.classList.add('red');
+  } else {
+    lostRevenueEl.textContent = '0 kr';
+    lostRevenueEl.classList.remove('red');
+    lostRevenueYearEl.textContent = '0 kr';
+    lostRevenueYearEl.classList.remove('red');
+  }
 
-// Förbättrad konvertering
-const improvedConversionRate = Math.min(conversionRate + AI_IMPROVEMENT, 100);
-
-// Admin-effekt
-const adminImpact = 0.002 * adminHours;
-
-// Potentiell intäkt
-const potentialRevenue = inquiries * projectValue * (improvedConversionRate / 100) * (1 + adminImpact);
-
-// Pengar på bordet
-const lostRevenue = potentialRevenue - currentRevenue;
-
-currentRevenueEl.textContent = formatCurrency(currentRevenue);
-
-if (lostRevenue > 0) {
-lostRevenueEl.textContent = '-' + formatCurrency(lostRevenue);
-lostRevenueEl.classList.add('red');
-lostRevenueYearEl.textContent = '-' + formatCurrency(lostRevenue * 12);
-lostRevenueYearEl.classList.add('red');
-} else {
-lostRevenueEl.textContent = '0 kr';
-lostRevenueEl.classList.remove('red');
-lostRevenueYearEl.textContent = '0 kr';
-lostRevenueYearEl.classList.remove('red');
+  currentRevenueEl.style.transform = 'scale(1.05)';
+  lostRevenueEl.style.transform = 'scale(1.05)';
+  lostRevenueYearEl.style.transform = 'scale(1.05)';
+  setTimeout(() => { 
+    currentRevenueEl.style.transform='scale(1)'; 
+    lostRevenueEl.style.transform='scale(1)'; 
+    lostRevenueYearEl.style.transform='scale(1)';
+  }, 200);
 }
 
-currentRevenueEl.style.transform = 'scale(1.05)';
-lostRevenueEl.style.transform = 'scale(1.05)';
-lostRevenueYearEl.style.transform = 'scale(1.05)';
-setTimeout(() => { 
-currentRevenueEl.style.transform='scale(1)'; 
-lostRevenueEl.style.transform='scale(1)'; 
-lostRevenueYearEl.style.transform='scale(1)';
-}, 200);
-}
-
-// Initial lock state
 explanationVideoSection.classList.add('locked');
 fullAIDemoSection.classList.add('locked');
 qualifiedText.style.display = 'none';
 
 calculateButton.addEventListener('click', () => {
-updateCalculations();
+  updateCalculations();
 
-// Unlock explanation video
-explanationVideoSection.classList.remove('locked');
-explanationVideoSection.innerHTML = `
-<video controls poster="stillbild1.png" style="aspect-ratio:9/16; width:100%; height:auto; object-fit:cover;">
- <source src="Forklaringsvideo.mp4" type="video/mp4">
- Din webbläsare stödjer inte videouppspelning.
-</video>
-`;
+  explanationVideoSection.classList.remove('locked');
+  explanationVideoSection.innerHTML = `
+  <video controls poster="stillbild1.png" style="aspect-ratio:9/16; width:100%; height:auto; object-fit:cover;">
+    <source src="Forklaringsvideo.mp4" type="video/mp4">
+    Din webbläsare stödjer inte videouppspelning.
+  </video>
+  `;
 
-step2.querySelector('.icon').textContent = '✅';
-step2.classList.add('unlocked','active');
+  step2.querySelector('.icon').textContent = '✅';
+  step2.classList.add('unlocked','active');
 
-fullAIDemoSection.innerHTML = `<div class="unlock-button" id="unlockFullAIDemo">🎬 Lås upp hela AI-demonstrationen</div>`;
+  fullAIDemoSection.innerHTML = `<div class="unlock-button" id="unlockFullAIDemo">🎬 Lås upp hela AI-demonstrationen</div>`;
 });
 
 document.addEventListener('click', function(e){
-if(e.target && e.target.id == 'unlockFullAIDemo'){
-fullAIDemoSection.classList.remove('locked');
-fullAIDemoSection.innerHTML = `
- <video controls poster="stillbild2.png" style="aspect-ratio:9/16; width:100%; height:auto; object-fit:cover;">
-   <source src="lang_ai_demo12.mp4" type="video/mp4">
-   Din webbläsare stödjer inte videouppspelning.
-</video>
-`;
-step3.querySelector('.icon').textContent = '✅';
-step3.classList.add('unlocked','active');
-qualifiedText.style.display = 'block';
-window.scrollTo({ top: qualifiedText.offsetTop - 20, behavior: 'smooth' });
-}
+  if(e.target && e.target.id == 'unlockFullAIDemo'){
+    fullAIDemoSection.classList.remove('locked');
+    fullAIDemoSection.innerHTML = `
+    <video controls poster="stillbild2.png" style="aspect-ratio:9/16; width:100%; height:auto; object-fit:cover;">
+      <source src="lang_ai_demo12.mp4" type="video/mp4">
+      Din webbläsare stödjer inte videouppspelning.
+    </video>
+    `;
+    step3.querySelector('.icon').textContent = '✅';
+    step3.classList.add('unlocked','active');
+    qualifiedText.style.display = 'block';
+    window.scrollTo({ top: qualifiedText.offsetTop - 20, behavior: 'smooth' });
+  }
 });
 </script>
 </body>
