@@ -103,17 +103,18 @@ color: white;
 
 .cta-section { padding: 50px 20px 60px; text-align: center; }
 .cta-text { font-size: 22px; color: #2d3748; margin-bottom: 25px; font-weight: 500; }
+/* UPDATED: Bigger "Boka ett kostnadsfritt möte" button */
 .cta-button { 
 display: inline-block;
 background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 color: white;
-padding: 22px 50px;
-font-size: 20px;
+padding: 28px 60px;  /* increased padding */
+font-size: 24px;       /* larger text */
 font-weight: 700;
 text-decoration: none;
 border-radius: 55px;
 cursor: pointer;
-min-width: 300px;
+min-width: 320px;      /* wider button */
 transition: all 0.3s ease;
 }
 .cta-button:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(102,126,234,0.5); }
@@ -160,7 +161,8 @@ position: relative;
 .result-value { font-size: 20px; }
 .input-help { font-size: 11px; }
 .cta-text { font-size: 20px; }
-.cta-button { font-size: 16px; padding: 16px 36px; }
+/* Make button slightly smaller on mobile but still bigger than before */
+.cta-button { font-size: 20px; padding: 22px 50px; }
 }
 </style>
 </head>
@@ -349,8 +351,8 @@ updateCalculations();
 explanationVideoSection.classList.remove('locked');
 explanationVideoSection.innerHTML = `
 <video controls poster="stillbild1.png" style="aspect-ratio:9/16; width:100%; height:auto; object-fit:cover;">
-  <source src="Forklaringsvideo.mp4" type="video/mp4">
-  Din webbläsare stödjer inte videouppspelning.
+ <source src="Forklaringsvideo.mp4" type="video/mp4">
+ Din webbläsare stödjer inte videouppspelning.
 </video>
 `;
 
@@ -364,10 +366,10 @@ document.addEventListener('click', function(e){
 if(e.target && e.target.id == 'unlockFullAIDemo'){
 fullAIDemoSection.classList.remove('locked');
 fullAIDemoSection.innerHTML = `
-  <video controls poster="stillbild2.png" style="aspect-ratio:9/16; width:100%; height:auto; object-fit:cover;">
-    <source src="lang_ai_demo12.mp4" type="video/mp4">
-    Din webbläsare stödjer inte videouppspelning.
-  </video>
+ <video controls poster="stillbild2.png" style="aspect-ratio:9/16; width:100%; height:auto; object-fit:cover;">
+   <source src="lang_ai_demo12.mp4" type="video/mp4">
+   Din webbläsare stödjer inte videouppspelning.
+</video>
 `;
 step3.querySelector('.icon').textContent = '✅';
 step3.classList.add('unlocked','active');
