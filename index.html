@@ -304,14 +304,22 @@ const adminHours = parseFloat(adminHoursInput.value) || 0;
 // Beräkna konverteringsgrad automatiskt
 const conversionRate = inquiries > 0 ? (projectsLastMonth / inquiries) * 100 : 0;
 
-const currentRevenue = totalRevenueLastMonth;
+// Beräkna genomsnittligt värde per projekt
+const projectValue = projectsLastMonth > 0 ? totalRevenueLastMonth / projectsLastMonth : 0;
 
+// Nuvarande intäkt
+const currentRevenue = projectsLastMonth * projectValue;
+
+// Förbättrad konvertering
 const improvedConversionRate = Math.min(conversionRate + AI_IMPROVEMENT, 100);
 
-// Admin effect (slow impact)
+// Admin-effekt
 const adminImpact = 0.002 * adminHours;
-const potentialRevenue = inquiries * (totalRevenueLastMonth / inquiries) * (improvedConversionRate / 100) * (1 + adminImpact);
 
+// Potentiell intäkt
+const potentialRevenue = inquiries * projectValue * (improvedConversionRate / 100) * (1 + adminImpact);
+
+// Pengar på bordet
 const lostRevenue = potentialRevenue - currentRevenue;
 
 currentRevenueEl.textContent = formatCurrency(currentRevenue);
